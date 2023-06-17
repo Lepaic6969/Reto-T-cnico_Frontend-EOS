@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Header :isMobile="isMobile"/>
+    <Content :isMobile="isMobile"/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import {defineAsyncComponent} from 'vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Header:defineAsyncComponent(()=>import('@/views/Header.vue')),
+    Content:defineAsyncComponent(()=>import('@/views/Content.vue'))
+  },
+  data(){
+    return {
+      isMobile:false //Variable que me indica si estoy o no dentro de un dispositivo móvil.
+    }
+  },
+  methods:{
+    setIsMobile(){
+      if(window.innerWidth<=450){
+        this.isMobile=true
+      }else{
+        this.isMobile=false
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', this.setIsMobile)
+    this.setIsMobile()
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.setIsMobile)
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+

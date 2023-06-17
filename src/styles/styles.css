@@ -1,0 +1,27 @@
+/* Estilos globales de mi aplicación */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --swiper-theme-color: rgb(19,180,151) !important;
+}
+.swiper-slide {
+    height: 50% !important;
+}
+.swiper-slide[data-v-2dedc691] {
+    height: 250px !important;
+}
+
+body{
+    background-color: rgb(36,41,46);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+.component{
+    height: 48%;
+    margin-bottom: 4%;
+    width: 100%;
+    border-radius: 20px;
+    /* border: 1px solid cyan; */
+}
+
