@@ -2,8 +2,11 @@
    
    <div class="component slider">
       <h1>Event Galleries</h1>
-      <Slider v-if="!isMobile"/>
+      <Slider class="slider-desktop" v-if="!isMobile"/>
       <SliderMobile v-else/>
+      
+      
+      
    </div>
 </template>
 
@@ -30,10 +33,8 @@ export default {
 .slider{
   height: 50%;
   margin-top:10%;
-  /* background: linear-gradient(to bottom, rgb(36,41,46), rgb(196,196,196));
-   */
-   background-color: rgb(47,54,61);
-   position:relative;
+  background-color: rgb(47,54,61);
+  position:relative;
  }
  h1{
    color:rgb(253,253,253);
@@ -44,8 +45,9 @@ export default {
    letter-spacing: 1px;
    position:absolute;
  }
-
  
+
+
  @media(max-width:450px){
    .slider{
       height:300px;

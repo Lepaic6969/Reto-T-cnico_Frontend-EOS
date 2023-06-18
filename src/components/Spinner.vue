@@ -69,7 +69,6 @@ h2{
 @media(max-width:450px){
   .spin-container{
     width:300px;
-    /* border:1px solid white; */
     position:sticky;
     top:25%;
     left: 25%;

@@ -37,10 +37,10 @@ export default{
 </script>
 <style scoped>
    .component{
-    height: 52%;
-    margin-bottom: 4%;
-    width: 100%;
-    border-radius: 20px;
+      height: 52%;
+      margin-bottom: 4%;
+      width: 100%;
+      border-radius: 20px;
   }
    .frame-one{
       background-color: rgb(39,46,53);
@@ -51,7 +51,6 @@ export default{
       height: 25%;
       width:90%;
       border-radius: 20px;
-      /* border:1px solid pink; */
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -64,11 +63,10 @@ export default{
       font-weight: 500;
    }
    .info-container{
-       /* border:1px solid pink; */
-       display:flex;
-       align-items: flex-start;
-       gap:4px;
-       color:rgb(183,183,183);
+      display:flex;
+      align-items: flex-start;
+      gap:4px;
+      color:rgb(183,183,183);
    }
    .info-container p{
       margin:0;
@@ -96,7 +94,6 @@ export default{
    .chart-left,.chart-right{
       width: 50%;
       border-radius: 20px;
-      /* border:1px solid pink; */
    }
    .chart-left img{
       width:80%;
@@ -130,7 +127,7 @@ export default{
          height: 280px;
       }
       .chart-left img{
-      width:90%;
-   }
+         width:90%;
+      }
    }
 </style>

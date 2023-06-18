@@ -9,7 +9,6 @@
 .sales{
   height: 40%;
   padding: 0;
-  /* background: linear-gradient(to left, rgb(9,133,130), rgb(19,180,151)); */
   background-image: url('../assets/icons/background.png');
   background-position: center center;
   background-size: cover;

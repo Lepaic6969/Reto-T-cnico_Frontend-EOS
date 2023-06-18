@@ -58,7 +58,6 @@ export default{
     width: 49%;
     height: 48%;
     border-radius: 20px;
-    /* border:1px solid pink; */
     background-color: rgb(47,54,61);
     position:relative;
     overflow: hidden;
@@ -120,7 +119,6 @@ export default{
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%); 
-    
   }
   .dot{
     left:60%;

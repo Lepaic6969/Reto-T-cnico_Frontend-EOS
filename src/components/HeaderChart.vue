@@ -38,7 +38,6 @@ export default {
       height: 25%;
       width:90%;
       border-radius: 20px;
-      /* border:1px solid pink; */
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -53,7 +52,6 @@ export default {
       font-size:18px;
    }
    .info-container{
-       /* border:1px solid pink; */
        display:flex;
        align-items: flex-start;
        gap:8px;

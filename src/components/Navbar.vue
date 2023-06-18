@@ -15,12 +15,10 @@
         <img class="icon-navbar promos" src="../assets/icons/promos.png" alt="promos">
     </div>
     <div class="user-container">
-        <!-- <img class="user-logo" src="../assets/icons/placeholder.png" alt="user-logo"> -->
         <button class="btn-user-logo" ><img class="user-logo" src="../assets/icons/user.png" alt="user-logo"> </button>
         <p class="user-name">David</p>
         <img src="../assets/icons/triangulo.png" alt="ícono del dropdown">
     </div>
- 
  </nav>
 </template>
 
@@ -39,7 +37,6 @@ export default {
     padding-left:20px ;
     padding-right:10px ;
     width:96%;
-    /* border:1px solid white; */
 }
 .hamburguesa{
     width:40px;
@@ -53,9 +50,6 @@ export default {
     margin-left: 7%;
     position:relative;
     width: 55%;
-    /* display:none; */
-    
-    
 }
 .input-container .lupa{
     position:absolute;
@@ -105,7 +99,6 @@ export default {
     margin-left: 20%;
     padding-right: 30px;
     border-right:2px solid rgb(42,47,52);
-    /* border:1px solid yellow; */
 }
 .icon-navbar{
     width: 50px;
@@ -120,7 +113,6 @@ export default {
     padding-right: 20px;
     border-radius: 10px;
     border:2px solid rgb(42,47,52);
-    /* border:1px solid pink; */
 }
 .btn-user-logo{
     background-color: rgb(196,196,196);
@@ -141,7 +133,6 @@ export default {
 /* Para dispositivos de pantalla muy grande*/
 @media(min-width:1700px){
     .navbar{
-        
         padding-left:40px ;
         padding-right:0px ;
         width:96%;

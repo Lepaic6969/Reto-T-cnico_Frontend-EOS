@@ -33,7 +33,7 @@ export default {
 <style scoped>
  .container{
     width: 93%;
-    height: 120vh;
+    height: 110vh;
     margin:0 auto;
     display:flex;
  }
@@ -44,19 +44,20 @@ export default {
  .left-container{
     margin-right: 2%;
 }
+
 @media(max-width:450px){
-.container{
-    height: auto;
-    min-height: 160vh;
-    flex-direction: column;
-    margin-top: 50px;
- }
-.left-container, .right-container{
-    height: 100%;
-    width: 100%;
-}
- .left-container{
-    margin-right: 2%;
- }
+    .container{
+        height: auto;
+        min-height: 160vh;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .left-container, .right-container{
+        height: 100%;
+        width: 100%;
+    }
+    .left-container{
+        margin-right: 2%;
+    }
 }
 </style>
