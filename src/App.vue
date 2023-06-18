@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header :isMobile="isMobile"/>
-    <Content :isMobile="isMobile"/>
+    <Content :isMobile="isMobile" :width="width"/>
   </div>
 </template>
 
@@ -15,11 +15,13 @@ export default {
   },
   data(){
     return {
-      isMobile:false //Variable que me indica si estoy o no dentro de un dispositivo móvil.
+      isMobile:false, //Variable que me indica si estoy o no dentro de un dispositivo móvil.
+      width:0 //Este es el ancho de la pantalla
     }
   },
   methods:{
     setIsMobile(){
+      this.width=window.innerWidth
       if(window.innerWidth<=450){
         this.isMobile=true
       }else{
@@ -29,6 +31,7 @@ export default {
   },
   mounted() {
     window.addEventListener('resize', this.setIsMobile)
+    this.width=window.innerWidth
     this.setIsMobile()
   },
   beforeUnmount() {

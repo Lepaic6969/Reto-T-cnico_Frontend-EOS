@@ -19,30 +19,30 @@
         >
                 <swiper-slide
                     ><img
-                    :src='`${imgArr[13]}`' /></swiper-slide
+                    :src='`${correctArray?arrDefault[0]:imgArr[13]}`' /></swiper-slide
                 ><swiper-slide
                     ><img
-                    :src='`${imgArr[14]}`' /></swiper-slide
+                    :src='`${correctArray?arrDefault[1]:imgArr[14]}`' /></swiper-slide
                 ><swiper-slide
                     ><img
-                    :src='`${imgArr[12]}`' /></swiper-slide
+                    :src='`${correctArray?arrDefault[2]:imgArr[12]}`' /></swiper-slide
                 ><swiper-slide
                     ><img
-                    :src='`${imgArr[7]}`' /></swiper-slide
+                    :src='`${correctArray?arrDefault[3]:imgArr[7]}`' /></swiper-slide
                 ><swiper-slide
                     ><img
-                    :src='`${imgArr[3]}`' /></swiper-slide
+                    :src='`${correctArray?arrDefault[4]:imgArr[3]}`' /></swiper-slide
                 ><swiper-slide
                     ><img
-                    :src='`${imgArr[4]}`' /></swiper-slide
+                    :src='`${correctArray?arrDefault[5]:imgArr[4]}`' /></swiper-slide
                 ><swiper-slide
                     ><img
-                    :src='`${imgArr[15]}`' /></swiper-slide
+                    :src='`${correctArray?arrDefault[6]:imgArr[15]}`' /></swiper-slide
                 ><swiper-slide
                     ><img
-                    :src='`${imgArr[17]}`' /></swiper-slide
+                    :src='`${correctArray?arrDefault[7]:imgArr[17]}`' /></swiper-slide
                 ><swiper-slide
-                    ><img :src='`${imgArr[18]}`'
+                    ><img :src='`${correctArray?arrDefault[8]:imgArr[18]}`'
                 /></swiper-slide>
         </swiper>
         <Spinner v-else/>
@@ -67,6 +67,12 @@
       SwiperSlide,
       Spinner
     },
+    props:{
+        width:{
+            type:Number,
+            required:true
+        }
+    },
     setup() {
       return {
         modules: [EffectCoverflow, Pagination],
@@ -74,7 +80,18 @@
     },
     data(){
         return {
-            imgArr:null
+            imgArr:null,
+            arrDefault:[
+                "https://swiperjs.com/demos/images/nature-1.jpg",
+                "https://swiperjs.com/demos/images/nature-2.jpg",
+                "https://swiperjs.com/demos/images/nature-3.jpg",
+                "https://swiperjs.com/demos/images/nature-4.jpg",
+                "https://swiperjs.com/demos/images/nature-5.jpg",
+                "https://swiperjs.com/demos/images/nature-6.jpg",
+                "https://swiperjs.com/demos/images/nature-7.jpg",
+                "https://swiperjs.com/demos/images/nature-8.jpg",
+                "https://swiperjs.com/demos/images/nature-9.jpg"
+            ]
         }
     },
     methods:{
@@ -87,6 +104,11 @@
             console.log(err)
         }
      }
+    },
+    computed:{
+        correctArray(){
+            return (this.width>=1280);
+        }
     },
     created(){
         this.getImages()

@@ -2,7 +2,7 @@
    
    <div class="component slider">
       <h1>Event Galleries</h1>
-      <Slider class="slider-desktop" v-if="!isMobile"/>
+      <Slider class="slider-desktop" v-if="!isMobile" :width="width"/>
       <SliderMobile v-else/>
       
       
@@ -21,6 +21,10 @@ export default {
    props:{
       isMobile:{
          type:Boolean,
+         required:true
+      },
+      width:{
+         type:Number,
          required:true
       }
    }

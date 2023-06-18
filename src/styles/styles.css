@@ -8,7 +8,7 @@
     height: 50% !important;
 }
 .swiper-slide[data-v-2dedc691] {
-    height: 250px !important;
+    height: 200px !important;
 }
 
 body{
@@ -24,4 +24,11 @@ body{
     border-radius: 20px;
     /* border: 1px solid cyan; */
 }
+
+@media(min-width:1270px){
+    .swiper-slide[data-v-2dedc691] {
+        height: 300px !important;
+    }
+}
+
 

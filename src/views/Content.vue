@@ -6,7 +6,7 @@
         </div>
         <div class="right-container">
             <FrameThree v-if="!isMobile"/>
-            <FrameFour :isMobile="isMobile"/> <!--Este siempre se va a mostrar-->
+            <FrameFour :isMobile="isMobile" :width="width"/> <!--Este siempre se va a mostrar-->
         </div>
      
     </div>
@@ -24,6 +24,10 @@ export default {
     props:{
         isMobile:{
             type:Boolean,
+            required:true
+        },
+        width:{
+            type:Number,
             required:true
         }
     }
